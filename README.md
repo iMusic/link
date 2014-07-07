@@ -1,4 +1,4 @@
 Index
 ====
 
-#1
+https://github.com/iMusic/link/issues/1
