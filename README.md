@@ -66,6 +66,7 @@ _更新中_
    ● window.name  
    ● location.hash  
    ● postMessage
+   ● navigator (IE6 bug)
  + CORS  
    ● XMLHttpRequest (modern browser)  
    ● XDomainRequest (IE8+)
