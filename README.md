@@ -5,9 +5,9 @@ _更新中_
 
 -
 * __上传__  &nbsp;&nbsp;  2014/7/6
-   &nbsp;&nbsp;自定义样式，参考：KISSY的[Uploader](http://gallery.kissyui.com/uploader/1.5/guide/index.html)
-    &nbsp;&nbsp;:one: &nbsp;传统上传。form，flash。
-    &nbsp;&nbsp;:two: &nbsp;**XMLHttpRequest Level 2**上传  支持多文件，显示进度条以及图片预览
+   &nbsp;&nbsp;自定义样式，参考：KISSY的[Uploader](http://gallery.kissyui.com/uploader/1.5/guide/index.html)  
+    :one: &nbsp;传统上传。form，flash。  
+    :two: &nbsp;**XMLHttpRequest Level 2**上传  支持多文件，显示进度条以及图片预览
    - [x] 点击按钮上传
    - [x] 拖动上传
    - [ ] 截图上传（目前仅chrome支持）  
@@ -56,10 +56,19 @@ _更新中_
   ```
 * 最后`grunt server`，这样修改并保存被监听文件时，页面会自动刷新。 
 
- >  [Markdown](http://www.getmarkman.com/)的作者开发的F5工具也能实现类似功能，很方便，[[F5官网]](http://www.getf5.com/)
+ >  [Markman](http://www.getmarkman.com/)的作者开发的F5工具也能实现类似功能，很方便，[[F5官网]](http://www.getf5.com/)
 
 -
 * __跨域__
+ + jsonp
+ + iframe  
+   ● document.domain  
+   ● window.name  
+   ● location.hash  
+   ● postMessage
+ + CORS  
+   ● XMLHttpRequest (modern browser)  
+   ● XDomainRequest (IE8+)
 
 -
 * __canvas图片的操作__
