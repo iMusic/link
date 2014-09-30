@@ -1,0 +1,5 @@
+<script>
+var data = JSON.parse(location.hash.substr(1));
+top.document.getElementById('ifr').style.height = data.h + 'px';
+top.callback(data);
+</script>

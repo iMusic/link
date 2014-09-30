@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8>
+<title>练习练习</title>
+<style>
+* {margin: 0; padding: 0;}
+#box {
+    margin: 40px auto;
+    width: 500px; height: 500px; border: 2px solid #eee;
+}
+
+#content {
+    overflow: auto;
+    height: 360px; border-bottom: 2px solid #eee;
+}
+
+#send textarea {
+    width: 100%; height: 100px; border: 1px solid rgba(0, 0, 0, .1);
+    padding: 4px 8px; box-sizing: border-box;
+    resize: none; outline: none;
+}
+
+.sb {
+    float: left;
+    width: 40px; height: 40px;
+    cursor: pointer;
+}
+
+#send span:nth-of-type(1) {
+    background: url(1.png);
+}
+
+#send span:nth-of-type(2) {
+    background: url(2-0.png);
+}
+
+#send-btn {
+    float: right; margin-top: 4px; margin-right: 10px;
+    width: 60px; height: 26px;
+}
+
+.msg {
+    overflow: hidden;
+}
+
+.left {
+    display: inline-block;
+    max-width: 200px;
+    border-width: 10px 22px 17px 13px;
+    border-image: url(1.png) 10 22 17 13 fill round;
+}
+.right {
+    float: right; display: inline-block;
+    border-width: 10px 13px 17px 22px;
+    border-image: url(2.png) 10 13 17 22 fill round;
+}
+</style>
+</head>
+<body>
+
+
+<div id="box">
+    <div id="content">
+        <div class="msg">
+            <div class="left">aaaaaa</div>
+        </div>
+        <div class="msg">  
+            <div class="right">bbbbbb</div>
+        </div>
+        <div class="msg">
+            <div class="left">cccccc</div>
+        </div>
+        <div class="msg">  
+            <div class="right">dddddd</div>
+        </div>
+    </div>
+    <div id="send">
+        <textarea></textarea>
+        <span class="sb" onclick="choose(this, 1)"></span><span class="sb" onclick="choose(this, 2)"></span>
+        <input id="send-btn" type="button" value="发送">
+    </div>
+</div>
+
+<script>
+console.log(document.referrer)
+var s = 1;
+var c = document.querySelectorAll('textarea')[0];
+var m = document.querySelector('#content');
+
+function choose(me, sid) {
+    if (s == sid) return;
+    if (sid == 1) {
+        me.style.background = 'url(1.png)';
+        me.nextSibling.style.background = 'url(2-0.png)';
+    } else {
+        me.style.background = 'url(2.png)';
+        me.previousSibling.style.background = 'url(1-0.png)';
+    }
+
+    s = sid;    
+}
+
+document.querySelector('#send-btn').onclick = function() {
+    var val = c.value;
+    if (val == '') return;
+
+    var msg = document.createElement('div');
+    msg.className = 'msg';
+    if (s == 1) {
+        msg.innerHTML = '<div class="left">' + val + '</div>';
+    } else {
+        msg.innerHTML = '<div class="right">' + val + '</div>';
+    }
+
+    m.appendChild(msg);
+}
+</script>
+</body>
+</html>
