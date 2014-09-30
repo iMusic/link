@@ -60,16 +60,18 @@ _更新中_
 
 -
 * __跨域__
- + jsonp
- + iframe  
-   ● document.domain  
-   ● window.name  
-   ● location.hash  
-   ● postMessage  
-   ● navigator (IE6 bug)
- + CORS  
-   ● XMLHttpRequest (modern browser)  
-   ● XDomainRequest (IE8+)
+ + [jsonp](http://segmentfault.com/blog/eq/1190000000700409)  
+ + [iframe](http://segmentfault.com/blog/eq/1190000000702539)  
+ ● [document.domain](http://segmentfault.com/blog/eq/1190000000702539#articleHeader0)  
+ ● [window.name](http://segmentfault.com/blog/eq/1190000000702539#articleHeader1)  
+ ● [location.hash](http://segmentfault.com/blog/eq/1190000000702539#articleHeader2)  
+ ● [navigator (IE6 bug)](http://segmentfault.com/blog/eq/1190000000702539#articleHeader3)  
+ ● [postMessage](http://segmentfault.com/blog/eq/1190000000702539#articleHeader4)  
+ + [CORS](http://segmentfault.com/blog/eq/1190000000702550)  
+ ● [XMLHttpRequest (modern browser)](http://segmentfault.com/blog/eq/1190000000702550#articleHeader0)  
+ ● [XDomainRequest (IE8+)](http://segmentfault.com/blog/eq/1190000000702550#articleHeader1)  
+ + 图像Ping (略)
+ + flash (略)
 
 -
 * __canvas图片的操作__
